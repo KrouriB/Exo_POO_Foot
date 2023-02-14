@@ -16,4 +16,11 @@ class Nation
     {
         $this->$equipes[] = $uneEquipe;
     }
+
+    
+
+    public function __toString()
+    {
+        return ucfirst(strtolower($this->pays));
+    }
 }
