@@ -21,4 +21,9 @@ class Equipe
     {
         $this->$saisons[] = $uneSaison;
     }
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
 }
