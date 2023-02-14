@@ -6,7 +6,7 @@ class Equipe
     private string $nom;
     private int $creation;
     private Nation $pays;
-    private array $saison
+    private array $saisons;
 
     public function __construct(string $nom, int $creation, Nation $pays)
     {
@@ -14,6 +14,11 @@ class Equipe
         $this->creation = $creation;
         $this->pays = $pays;
         $this->pays->rejoindreLaNation();// fonction a definir dans Nation
-        $this->saison = [];
+        $this->saisons = [];
+    }
+
+    public function ajouterSaison(Saison $uneSaison)
+    {
+        $this->$saisons[] = $uneSaison;
     }
 }

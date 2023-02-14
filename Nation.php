@@ -11,4 +11,9 @@ class Nation
         $this->pays = $pays;
         $this->$equipes-> = [];
     }
+
+    public function rejoindreLaNation(Equipe $uneEquipe)
+    {
+        $this->$equipes[] = $uneEquipe;
+    }
 }

@@ -19,4 +19,9 @@ class Joueur
         $this->equipe = $equipe;
         $this->saisons = [];
     }
+
+    public function ajouterSaison(Saison $uneSaison)
+    {
+        $this->$saisons[] = $uneSaison;
+    }
 }
