@@ -6,4 +6,7 @@ class Joueur
     private string $nom;
     private string $prenom;
     private DateTime $dateNaissance;
+    private Nation $pays;
+    private Equipe $equipe;
+    private array $saison;
 }
