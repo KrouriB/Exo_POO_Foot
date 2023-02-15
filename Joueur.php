@@ -70,7 +70,23 @@ class Joueur
     {
         $today = new DateTime();
         $diff = date_diff($this->dateNaissance,$today);
-        return $diff->years;
+        return $diff->format('%Y');
+    }
+    
+    public function afficherInfoJoueur()
+    {
+        $display = "<div style='background-color:lightgreen;color:white;width:360px;height:360px;padding:40px;display:flex;flex-direction:column;justify-content:space-between'><div style='display:flex;flex-direction:column'><strong style='font-size:30px'>".$this."</strong><span style='font-size:20px'>".$this->pays." - ".$this->calculAge()." ans</span></div><div style='display:flex;flex-direction:column'>";
+        foreach($this->saisons as $uneSaison)
+        {
+            $display .= "<span style='font-size:15px'>".$uneSaison->get_equipe()." ( ".$uneSaison." )</span>";
+        }
+        $display .= "</div></div><br><br>";
+        echo $display;
+    }
+
+    public function __toString()
+    {
+        return $this->prenom." ".$this->nom;
     }
 
 }
