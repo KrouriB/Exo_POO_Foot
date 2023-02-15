@@ -17,6 +17,23 @@ class Equipe
         $this->saisons = [];
     }
 
+    public function set_nom(string $nom)
+    {
+        $this->nom = $nom;
+    }
+    public function get_nom()
+    {
+        return $this->nom;
+    }
+    public function set_creation(int $creation)
+    {
+        $this->creation = $creation;
+    }
+    public function get_creation()
+    {
+        return $this->creation;
+    }
+
     public function ajouterSaison(Saison $uneSaison)
     {
         $this->saisons[] = $uneSaison;

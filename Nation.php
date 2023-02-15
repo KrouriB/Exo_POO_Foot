@@ -12,6 +12,15 @@ class Nation
         $this->equipes = [];
     }
 
+    public function set_pays(string $pays)
+    {
+        $this->pays = $pays;
+    }
+    public function get_pays()
+    {
+        return  $this->pays;
+    }
+
     public function rejoindreLaNation(Equipe $uneEquipe)
     {
         $this->equipes[] = $uneEquipe;
