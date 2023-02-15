@@ -13,13 +13,13 @@ class Equipe
         $this->nom = $nom;
         $this->creation = $creation;
         $this->pays = $pays;
-        $this->pays->rejoindreLaNation();// fonction a definir dans Nation
+        $this->pays->rejoindreLaNation($this);
         $this->saisons = [];
     }
 
     public function ajouterSaison(Saison $uneSaison)
     {
-        $this->$saisons[] = $uneSaison;
+        $this->saisons[] = $uneSaison;
     }
 
     public function __toString()

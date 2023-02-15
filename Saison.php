@@ -6,15 +6,15 @@ class Saison
     private Joueur $joueur;
     private Equipe $equipe;
     private int $anneedebut;
-    private int $anneefin;
+    private mixed $anneefin;
 
-    public function __construct(int $anneedebut, int $anneefin, Joueur $joueur, Equipe $equipe)
+    public function __construct(int $anneedebut, mixed $anneefin, Joueur $joueur, Equipe $equipe)
     {
         $this->anneedebut = $anneedebut;
         $this->anneefin = $anneefin;
         $this->joueur = $joueur;
         $this->equipe = $equipe;
-        $this->joueur->ajouterSaison(); // fonction a definir dans Joueur
-        $this->equipe->ajouterSaison(); // fonction a definir dans Equipe
+        $this->joueur->ajouterSaison($this);
+        $this->equipe->ajouterSaison($this);
     }
 }
