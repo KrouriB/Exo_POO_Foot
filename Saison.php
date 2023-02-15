@@ -34,4 +34,17 @@ class Saison
     {
         return $this->anneefin;
     }
+    public function get_joueur()
+    {
+        return $this->joueur;
+    }
+    public function get_equipe()
+    {
+        return $this->equipe;
+    }
+
+    public function __toString()
+    {
+        return $this->anneedebut." - ".$this->anneefin;
+    }
 }

@@ -33,6 +33,10 @@ class Equipe
     {
         return $this->creation;
     }
+    public function get_pays()
+    {
+        return $this->pays;
+    }
 
     public function ajouterSaison(Saison $uneSaison)
     {
