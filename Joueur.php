@@ -22,6 +22,13 @@ class Joueur
 
     public function ajouterSaison(Saison $uneSaison)
     {
-        $this->$saisons[] = $uneSaison;
+        $this->saisons[] = $uneSaison;
+    }
+
+    public function calculAge()
+    {
+        $today = new DateTime();
+        $diff = date_diff($this->dateNaissance,$today);
+        return $diff->years;
     }
 }
