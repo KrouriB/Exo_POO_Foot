@@ -43,6 +43,17 @@ class Equipe
         $this->saisons[] = $uneSaison;
     }
 
+    public function afficherInfoEquipe()
+    {
+        $display = "<div style='background-color:blue;color:white;width:360px;height:360px;padding:40px;display:flex;flex-direction:column;justify-content:space-between'><div style='display:flex;flex-direction:column'><strong style='font-size:30px'>".$this."</strong><span style='font-size:20px'>".$this->pays." - ".$this->creation." ans</span></div><div style='display:flex;flex-direction:column'>";
+        foreach($this->saisons as $uneSaison)
+        {
+            $display .= "<span style='font-size:15px'>".$uneSaison->get_joueur()." ( ".$uneSaison." )</span>";
+        }
+        $display .= "</div></div><br><br>";
+        echo $display;
+    }
+
     public function __toString()
     {
         return $this->nom;
