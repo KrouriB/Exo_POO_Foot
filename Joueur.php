@@ -84,6 +84,7 @@ class Joueur
         echo $display;
     }
 
+    
     public function __toString()
     {
         return $this->prenom." ".$this->nom;

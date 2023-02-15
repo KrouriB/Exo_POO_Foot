@@ -53,7 +53,7 @@ class Equipe
         $display .= "</div></div><br><br>";
         echo $display;
     }
-
+ 
     public function __toString()
     {
         return $this->nom;

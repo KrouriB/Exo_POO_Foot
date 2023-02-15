@@ -13,6 +13,7 @@ spl_autoload_register(function ($class_name) {
 	require_once $class_name . '.php';
 });
 
+
 $fr = new Nation ("France");
 $psg = new Equipe ("Paris Saint-Germain", 1970, $fr);
 $jHE = new Joueur ("Ekitike", "Hugo", "20-06-2002", $fr, $psg);

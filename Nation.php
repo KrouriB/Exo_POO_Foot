@@ -37,6 +37,7 @@ class Nation
         echo $display;
     }
 
+    
     public function __toString()
     {
         return ucfirst(strtolower($this->pays));

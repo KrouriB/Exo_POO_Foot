@@ -43,6 +43,7 @@ class Saison
         return $this->equipe;
     }
 
+    
     public function __toString()
     {
         return $this->anneedebut." - ".$this->anneefin;
