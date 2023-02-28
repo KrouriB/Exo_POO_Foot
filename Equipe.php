@@ -7,14 +7,16 @@ class Equipe
     private int $creation;
     private Nation $pays;
     private array $saisons;
+	private Affichage $affichage;
 
-    public function __construct(string $nom, int $creation, Nation $pays)
+    public function __construct(string $nom, int $creation, Nation $pays, Affichage $affichage)
     {
         $this->nom = $nom;
         $this->creation = $creation;
         $this->pays = $pays;
         $this->pays->rejoindreLaNation($this);
         $this->saisons = [];
+		$this->affichage->ajouterEquipe($this);
     }
 
     public function set_nom(string $nom)

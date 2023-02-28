@@ -5,11 +5,13 @@ class Nation
     // pays,Equipe(via equipe ou saison)
     private string $pays;
     private array $equipes;
+	private Affichage $affichage;
 
-    public function __construct(string $pays)
+    public function __construct(string $pays ,Affichage $affichage)
     {
         $this->pays = $pays;
         $this->equipes = [];
+		$this->affichage->ajouterNation($this);
     }
 
     public function set_pays(string $pays)

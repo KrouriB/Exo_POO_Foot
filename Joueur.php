@@ -9,8 +9,9 @@ class Joueur
     private Nation $pays;
     private Equipe $equipe;
     private array $saisons;
+	private Affichage $affichage;
 
-    public function __construct(string $nom, string $prenom, string $dateDeNaissance, Nation $pays, Equipe $equipe)
+    public function __construct(string $nom, string $prenom, string $dateDeNaissance, Nation $pays, Equipe $equipe ,Affichage $affichage)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -18,6 +19,7 @@ class Joueur
         $this->pays = $pays;
         $this->equipe = $equipe;
         $this->saisons = [];
+		$this->affichage->ajouterJoueur($this);
     }
 
     public function set_nom(string $nom)
