@@ -1,0 +1,6 @@
+Exercice sur les POO en php pour l'affichage d'objet en utilisant un peu plus d'HTML et de CSS.
+La classe Nation a pour argument un objet de classe Affichage ,il y aussi une liste equipe , les objet de cette classe ont une fonction d'affichage prmtant d'afficher les equipe d'un pays.
+La classe Equipe a pour argument un objet de classe Affichage et un objet de classe Equipe ,il y aussi une liste saison , les objet de cette classe ont une fonction d'affichage permettant d'afficher les joueur d'une equipe en quel saison.
+La classe Joueur a pour argument un objet de classe Affichage , un objet de classe Equipe et un objet de classe Nation ,il y aussi une liste saison , les objet de cette classe ont une fonction d'affichage permettant d'afficher les equipes du auquel un joueur a fait parti et en quel saison.
+La classe Saison  a pour argument un objet de classe Equipe et un objet de classe Joueur, auquel on ajoute une année de début et une de fin.
+La classe Affichage a pour but d'afficher tout les objet d'une classe (Equipe,Joueur,Nation) en les stockant dans une liste et des les afficher via une fonction qui utilise la fonction de la classe visée qui créer un block qui ne reste plus qu'a afficher.
